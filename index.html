@@ -105,6 +105,7 @@
                         ball.dy=-ball.dy
                         b.status=0
                         score++
+                        document.getElementById("score").innerText = "Score: " + score
                         if(score===7*5){
                             alert("You are win")
                             location.reload()
@@ -116,11 +117,12 @@
       }
 
       function resetball() {
-             ball.x = game.width / 2;
-             ball.y = game.height - 30;
-             ball.dx = 2;
-             ball.dy = -2;
-             paddle.x = (game.width - paddle.width)/2;
+             ball.x = game.width / 2
+             ball.y = game.height - 30
+             ball.dx = 2
+             ball.dy = -2
+             paddle.x = (game.width - paddle.width)/2
+             document.getElementById("lives").innerText = "Lives: " + lives
             }
 
      const ctx=game.getContext("2d")
